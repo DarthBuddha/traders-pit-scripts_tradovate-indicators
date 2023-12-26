@@ -1,0 +1,9 @@
+#   VS Code
+.vscode/
+*.json
+node_modules
+builtin/
+examples/
+tools/
+typescript/
+
