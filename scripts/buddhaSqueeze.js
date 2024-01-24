@@ -1,17 +1,17 @@
-/*********************************
- * Darth Buddha Tradovate Script *
- * *******************************
- * Buddha Squeeze
- * Build : 25
- *********************************/
-/*  Constant  Variables  */
-const predef = require("../tools/predef");
-const meta = require("../tools/meta");
-const EMA = require("../tools/EMA");
-const SMA = require("../tools/SMA");
-const trueRange = require("../tools/trueRange");
-const StdDev = require("../tools/StdDev");
-/*  Initialize  Class  */
+/**********************************************************************
+ *                    Darth Buddha Tradovate Script                   *
+ * ****************************************************************** *
+ * Name    : Buddha TTM Squeeze                                       *
+ * Version : 01.19.2024                                               *
+ ******************************************************************** */
+/* ----------------------- Constant  Variables ---------------------- */
+const predef = require("./tools/predef");
+const meta = require("./tools/meta");
+const EMA = require("./tools/EMA");
+const SMA = require("./tools/SMA");
+const trueRange = require("./tools/trueRange");
+const StdDev = require("./tools/StdDev");
+/* --------------------------- START CODE --------------------------- */
 class buddhaSqueeze {
     init() {
         this.prices = [];
@@ -132,7 +132,7 @@ class buddhaSqueeze {
         };
     }
 }
-/*  Export  Module  */
+/* -------------------------- Module Export ------------------------- */
 module.exports = {
     name: "buddhaSqueeze",
     description: "Buddha Squeeze",
@@ -157,9 +157,9 @@ module.exports = {
     areaChoice: meta.AreaChoice.NEW,
     schemeStyles: {
         dark: {
-            value: predef.styles.plot({ color: "#00000000", lineWidth: 0 }),
+            value: predef.styles.plot({ color: "#00000000", opacity: 0, lineWidth: 0 }),
             squeeze: predef.styles.plot({ color: "#F8E71C", lineWidth: 1 }),
         },
     },
 };
-/*  END  CODE  */
+/* ---------------------------- END CODE ---------------------------- */
